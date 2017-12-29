@@ -41,7 +41,7 @@ void	CMJManage::InitPai(int p_HZPaiNum)
 	}
 	//Íò
 	for (UINT i = 1; i <= 9; i++)
-	{
+	{ 
 		stPAI t_Pai;
 		t_Pai.m_Type = 2;
 		t_Pai.m_Value = i;

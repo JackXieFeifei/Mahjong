@@ -1,34 +1,29 @@
 #ifndef _CMJ_H
 #define _CMJ_H
-//============================================
-//Author:Honghaier
-//Date:2006-12-20
-//QQ:285421210
-//============================================
+
 #include <windows.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-
-#define	MJPAI_ZFB				0	//中，发，白
-#define MJPAI_FENG				1	//东西南北风
+#define MJPAI_ZFB				0	//中，发，白
+#define MJPAI_FENG			1	//东西南北风
 #define MJPAI_WAN				2	//万
-#define MJPAI_TIAO				3	//条
-#define MJPAI_BING				4	//饼
+#define MJPAI_TIAO			3	//条
+#define MJPAI_BING			4	//饼
 #define MJPAI_HUA				5	//花
 
-#define MJPAI_GETPAI			true	//起牌
+#define MJPAI_GETPAI			true		//起牌
 #define MJPAI_PUTPAI			false	//打牌
+
 //节点信息
 struct stPAI
 {
-	int		m_Type;				//牌类型
+	int		m_Type;			//牌类型
 	int		m_Value;			//牌字
 
-}
-;
+};
 
 //吃牌顺
 struct stCHI
@@ -37,8 +32,8 @@ struct stCHI
 	int		m_Value1;			//牌字
 	int		m_Value2;			//牌字
 	int		m_Value3;			//牌字
-}
-;
+};
+
 //	m_Type		m_Value
 //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
 //	0		|	中	1	发2	白											  
@@ -61,24 +56,24 @@ struct stCHI
 struct stGoodInfo
 {
 	char	m_GoodName[100];			//胡牌术语
-	int		m_GoodValue;				//胡牌番数
-}
-;
+	int		m_GoodValue;			//胡牌番数
+};
+
 //牌
 class CMJ
 {
-	vector<	int >		m_MyPAIVec[6];		//起的种牌型
-	vector<	int >		m_ChiPAIVec[6];		//吃的种牌型
+	vector<	int >		m_MyPAIVec[6];	//起的种牌型
+	vector<	int >		m_ChiPAIVec[6];	//吃的种牌型
 	vector<	int >		m_PengPAIVec[6];	//碰的种牌型
 	vector<	int >		m_GangPAIVec[6];	//杠的种牌型
 
-	stPAI				m_LastPAI;			//最后起的牌
-	stGoodInfo			m_GoodInfo;			//胡牌信息
+	stPAI				m_LastPAI;		//最后起的牌
+	stGoodInfo			m_GoodInfo;		//胡牌信息
 
 	bool				m_9LBD;				//是否听连宝灯牌型
 	bool				m_13Y;				//是否听十三幺
-	int					m_MKNum;			//明刻数
-	int					m_AKNum;			//暗刻数
+	int				m_MKNum;				//明刻数
+	int				m_AKNum;				//暗刻数
 	bool				m_4AK;				//是否是听四暗刻
 
 	vector<	stCHI >		m_TempChiPAIVec;	//吃的可选组合
@@ -258,7 +253,6 @@ private:
 	//检测是否听牌
 	bool	CheckTING();
 
-}
-;
+};
 
 #endif
