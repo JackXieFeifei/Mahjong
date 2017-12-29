@@ -15,21 +15,23 @@ struct stPAIEx
 //麻将管理器
 class CMJManage
 {
-	vector<stPAI>	m_MJVec;				//麻将数据VEC
-	int				m_HZPaiNum;		//黄庄的牌数
 public:
-
-	//构造函数
 	CMJManage();
-	//析构函数
 	~CMJManage();
+
 	//初始化牌
-	void	InitPai(int p_HZPaiNum = 0);
+	void InitPai(int p_HZPaiNum = 0);
+
 	//起牌
 	stPAIEx	GetAPai();
+
 private:
 	//洗牌
 	void	XiPai();
+
+private:
+	vector<stPAI>		m_MJVec;			//麻将数据VEC
+	int				m_HZPaiNum;		//黄庄的牌数
 };
 
 #endif

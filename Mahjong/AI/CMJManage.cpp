@@ -1,18 +1,17 @@
 #include "stdafx.h"
 #include "CMJManage.h"
 
-//构造函数
+
 CMJManage::CMJManage()
 {
 	m_HZPaiNum = 0;
 }
-//析构函数
+
 CMJManage::~CMJManage()
 {
 
 }
 
-//初始化牌
 void	CMJManage::InitPai(int p_HZPaiNum)
 {
 	m_HZPaiNum = p_HZPaiNum;
@@ -75,7 +74,6 @@ void	CMJManage::InitPai(int p_HZPaiNum)
 	XiPai();
 }
 
-//洗牌
 void	CMJManage::XiPai()
 {
 	srand(GetTickCount());
@@ -86,7 +84,6 @@ void	CMJManage::XiPai()
 stPAIEx	CMJManage::GetAPai()
 {
 	//如果所有牌都起完了
-
 	stPAIEx	t_Pai;
 	t_Pai.m_NewPai.m_Type = m_MJVec.back().m_Type;
 	t_Pai.m_NewPai.m_Value = m_MJVec.back().m_Value;

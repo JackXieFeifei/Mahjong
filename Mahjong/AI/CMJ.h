@@ -28,10 +28,10 @@ struct stPAI
 //吃牌顺
 struct stCHI
 {
-	int		m_Type;				//牌类型
-	int		m_Value1;			//牌字
-	int		m_Value2;			//牌字
-	int		m_Value3;			//牌字
+	int		m_Type;			//牌类型
+	int		m_Value1;		//牌字
+	int		m_Value2;		//牌字
+	int		m_Value3;		//牌字
 };
 
 //	m_Type		m_Value
@@ -55,38 +55,17 @@ struct stCHI
 //胡牌信息
 struct stGoodInfo
 {
-	char	m_GoodName[100];			//胡牌术语
+	char		m_GoodName[100];		//胡牌术语
 	int		m_GoodValue;			//胡牌番数
 };
 
 //牌
 class CMJ
 {
-	vector<	int >		m_MyPAIVec[6];	//起的种牌型
-	vector<	int >		m_ChiPAIVec[6];	//吃的种牌型
-	vector<	int >		m_PengPAIVec[6];	//碰的种牌型
-	vector<	int >		m_GangPAIVec[6];	//杠的种牌型
-
-	stPAI				m_LastPAI;		//最后起的牌
-	stGoodInfo			m_GoodInfo;		//胡牌信息
-
-	bool				m_9LBD;				//是否听连宝灯牌型
-	bool				m_13Y;				//是否听十三幺
-	int				m_MKNum;				//明刻数
-	int				m_AKNum;				//暗刻数
-	bool				m_4AK;				//是否是听四暗刻
-
-	vector<	stCHI >		m_TempChiPAIVec;	//吃的可选组合
-	vector<	stPAI >		m_TempPengPAIVec;	//碰的可选组合
-	vector<	stPAI >		m_TempGangPAIVec;	//杠的可选组合
-
 public:
-
-	//构造
 	CMJ();
-	//析构
 	~CMJ();
-	//初始化
+
 	void			Init();
 	//起牌
 	bool			AddPai(int p_Type, int p_Value);
@@ -253,6 +232,24 @@ private:
 	//检测是否听牌
 	bool	CheckTING();
 
+private:
+	vector<int>		m_MyPAIVec[6];	//起的种牌型
+	vector<int>		m_ChiPAIVec[6];	//吃的种牌型
+	vector<int>		m_PengPAIVec[6];	//碰的种牌型
+	vector<int>		m_GangPAIVec[6];	//杠的种牌型
+
+	stPAI			m_LastPAI;		//最后起的牌
+	stGoodInfo		m_GoodInfo;		//胡牌信息
+
+	bool				m_9LBD;			//是否听连宝灯牌型
+	bool				m_13Y;			//是否听十三幺
+	int				m_MKNum;			//明刻数
+	int				m_AKNum;			//暗刻数
+	bool				m_4AK;			//是否是听四暗刻
+
+	vector<stCHI>		m_TempChiPAIVec;	//吃的可选组合
+	vector<stPAI>		m_TempPengPAIVec;	//碰的可选组合
+	vector<stPAI>		m_TempGangPAIVec;	//杠的可选组合
 };
 
 #endif

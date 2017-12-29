@@ -30,7 +30,7 @@ bool	CMJ::AddPai(int p_Type, int p_Value)
 {
 	int iSize = m_MyPAIVec[p_Type].size();
 	bool t_Find = false;
-	vector<	int >::iterator Iter;
+	vector<int>::iterator Iter;
 	for (Iter = m_MyPAIVec[p_Type].begin(); Iter != m_MyPAIVec[p_Type].end(); Iter++)
 	{
 		if ((*Iter)>p_Value)
