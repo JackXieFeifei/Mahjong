@@ -45,3 +45,22 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.exe
+*.pdb
+*.suo
+*.obj
+*.tlog
+*.idb
+*.log
+*.pch
+*.vcxproj
+*.user
+*.filters
+*.sln
+*.sdf
+*.opensdf
+*.ipch
+*.ilk
+Mahjong/targetver.h
+Mahjong/stdafx.h
+Mahjong/stdafx.cpp
