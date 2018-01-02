@@ -22,12 +22,14 @@ void	CMJManage::InitPai(int p_HZPaiNum)
 		stPAI t_Pai;
 		t_Pai.m_Type = 0;
 		t_Pai.m_Value = i;
+
+		// 每个牌型有四张牌
 		m_MJVec.push_back(t_Pai);
 		m_MJVec.push_back(t_Pai);
 		m_MJVec.push_back(t_Pai);
 		m_MJVec.push_back(t_Pai);
 	}
-	//东南西北
+	//东西南北
 	for (UINT i = 1; i <= 4; i++)
 	{
 		stPAI t_Pai;

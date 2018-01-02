@@ -965,12 +965,12 @@ bool	CMJ::Check5Pai(int iValue1, int iValue2, int iValue3, int iValue4, int iVal
 		if (Check3Pai(iValue3, iValue4, iValue5))return true;
 
 	}
-	//如果中间两个为将
+	//如果中间两个为将  eg.1万 2万 2万 2万 3万
 	if (CheckAAAPai(iValue2, iValue3, iValue4))
 	{
 		if (CheckABCPai(iValue1, iValue4, iValue5))return true;
 	}
-	//如果是左边两个为将，右边为三重张或三连张
+	//如果是右边两个为将，左边为三重张或三连张
 	if (CheckAAPai(iValue4, iValue5))
 	{
 		if (Check3Pai(iValue1, iValue2, iValue3))return true;
