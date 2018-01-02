@@ -1085,7 +1085,7 @@ bool	CMJ::Check3Pai(int iValue1, int iValue2, int iValue3)
 bool	CMJ::Check6Pai(int iValue1, int iValue2, int iValue3, int iValue4, int iValue5, int iValue6)
 {
 	if (Check3Pai(iValue1, iValue2, iValue3) && Check3Pai(iValue4, iValue5, iValue6))return true;
-	if (Check3Pai(iValue1, iValue2, iValue3) && Check3Pai(iValue4, iValue5, iValue6))return true;
+	//if (Check3Pai(iValue1, iValue2, iValue3) && Check3Pai(iValue4, iValue5, iValue6))return true;
 	//三连对
 	if (CheckAABBCCPai(iValue1, iValue2, iValue3, iValue4, iValue5, iValue6))return true;
 	//第一张牌四连张
