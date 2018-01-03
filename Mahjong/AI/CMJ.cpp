@@ -56,7 +56,7 @@ bool	CMJ::AddPai(int p_Type, int p_Value)
 int	CMJ::GetPaiIndex(int p_Type, int p_Value)
 {
 	int count = 0;
-	for (UINT i = 0; i < 6; i++)
+	for (INT i = 0; i < 6; i++)
 	{
 		vector<	int >::iterator Iter;
 		for (Iter = m_MyPAIVec[i].begin(); Iter != m_MyPAIVec[i].end(); Iter++)
@@ -74,7 +74,7 @@ int	CMJ::GetPaiIndex(int p_Type, int p_Value)
 bool	CMJ::DelPai(int PaiIndex)
 {
 	int count = 0;
-	for (UINT i = 0; i < 6; i++)
+	for (INT i = 0; i < 6; i++)
 	{
 		vector<	int >::iterator Iter;
 		for (Iter = m_MyPAIVec[i].begin(); Iter != m_MyPAIVec[i].end(); Iter++)
@@ -106,7 +106,7 @@ bool	CMJ::DelPai(int p_Type, int p_Value)
 //清空牌
 void	CMJ::CleanUp()
 {
-	for (UINT i = 0; i < 6; i++)
+	for (INT i = 0; i < 6; i++)
 	{
 		m_MyPAIVec[i].clear();
 		m_ChiPAIVec[i].clear();
@@ -124,7 +124,7 @@ stGoodInfo		*CMJ::GetInfo()
 void	CMJ::PrintAllPai()
 {
 	cout << " ";
-	for (UINT i = 0; i < 13; i++)
+	for (INT i = 0; i < 13; i++)
 	{
 		cout << i << "  - ";
 	}
@@ -154,7 +154,7 @@ void	CMJ::PrintAllPai()
 
 	}
 	cout << endl;
-	for (UINT i = 0; i < icount; i++)
+	for (INT i = 0; i < icount; i++)
 	{
 		cout << "     ";
 	}
@@ -183,7 +183,7 @@ void	CMJ::PrintAllPai()
 		}
 	}
 	cout << endl;
-	for (UINT i = 0; i < icount; i++)
+	for (INT i = 0; i < icount; i++)
 	{
 		cout << "     ";
 	}
@@ -198,7 +198,7 @@ void	CMJ::PrintAllPai()
 		}
 	}
 	cout << endl;
-	for (UINT i = 0; i < icount; i++)
+	for (INT i = 0; i < icount; i++)
 	{
 		cout << "     ";
 	}
@@ -213,7 +213,7 @@ void	CMJ::PrintAllPai()
 		}
 	}
 	cout << endl;
-	for (UINT i = 0; i < icount; i++)
+	for (INT i = 0; i < icount; i++)
 	{
 		cout << "     ";
 	}
@@ -228,7 +228,7 @@ void	CMJ::PrintAllPai()
 		}
 	}
 	cout << endl;
-	for (UINT i = 0; i < icount; i++)
+	for (INT i = 0; i < icount; i++)
 	{
 		cout << "     ";
 	}
@@ -298,7 +298,7 @@ bool	CMJ::CheckChiPai(int p_Type, int p_Value)
 		int iSize = m_MyPAIVec[p_Type].size();
 		if (iSize >= 2)
 		{
-			for (UINT i = 0; i < iSize - 1; i++)
+			for (INT i = 0; i < iSize - 1; i++)
 			{
 				if ((m_MyPAIVec[p_Type][i] == (p_Value - 2)) && (m_MyPAIVec[p_Type][i + 1] == (p_Value - 1)))
 				{
@@ -335,7 +335,7 @@ bool	CMJ::CheckChiPai(int p_Type, int p_Value)
 		//假设吃B，已有ABC
 		if (iSize >= 3)
 		{
-			for (UINT i = 1; i < iSize - 1; i++)
+			for (INT i = 1; i < iSize - 1; i++)
 			{
 				if ((m_MyPAIVec[p_Type][i - 1] == (p_Value - 1)) && (m_MyPAIVec[p_Type][i] == p_Value) && (m_MyPAIVec[p_Type][i + 1] == (p_Value + 1)))
 				{
@@ -351,7 +351,7 @@ bool	CMJ::CheckChiPai(int p_Type, int p_Value)
 		//假设吃B，已有ABBC
 		if (iSize >= 4)
 		{
-			for (UINT i = 1; i < iSize - 2; i++)
+			for (INT i = 1; i < iSize - 2; i++)
 			{
 				if ((m_MyPAIVec[p_Type][i - 1] == (p_Value - 1)) && (m_MyPAIVec[p_Type][i] == p_Value) && (m_MyPAIVec[p_Type][i + 2] == (p_Value + 1)))
 				{
@@ -367,7 +367,7 @@ bool	CMJ::CheckChiPai(int p_Type, int p_Value)
 		//假设吃B，已有ABBBC
 		if (iSize >= 5)
 		{
-			for (UINT i = 1; i < iSize - 3; i++)
+			for (INT i = 1; i < iSize - 3; i++)
 			{
 				if ((m_MyPAIVec[p_Type][i - 1] == (p_Value - 1)) && (m_MyPAIVec[p_Type][i] == p_Value) && (m_MyPAIVec[p_Type][i + 3] == (p_Value + 1)))
 				{
@@ -383,7 +383,7 @@ bool	CMJ::CheckChiPai(int p_Type, int p_Value)
 		//假设吃B，已有ABBBBC
 		if (iSize >= 6)
 		{
-			for (UINT i = 1; i < iSize - 4; i++)
+			for (INT i = 1; i < iSize - 4; i++)
 			{
 				if ((m_MyPAIVec[p_Type][i - 1] == (p_Value - 1)) && (m_MyPAIVec[p_Type][i] == p_Value) && (m_MyPAIVec[p_Type][i + 4] == (p_Value + 1)))
 				{
@@ -538,7 +538,7 @@ bool	CMJ::CheckPengPai(int p_Type, int p_Value)
 		int iSize = m_MyPAIVec[p_Type].size();
 		if (iSize >= 2)
 		{
-			for (UINT i = 0; i < iSize - 1; i++)
+			for (INT i = 0; i < iSize - 1; i++)
 			{
 				if ((m_MyPAIVec[p_Type][i] == p_Value) && (m_MyPAIVec[p_Type][i + 1] == p_Value))
 				{
@@ -585,7 +585,7 @@ bool	CMJ::CheckGangPai(int p_Type, int p_Value)
 		int iSize = m_MyPAIVec[p_Type].size();
 		if (iSize >= 3)
 		{
-			for (UINT i = 0; i < iSize - 2; i++)
+			for (INT i = 0; i < iSize - 2; i++)
 			{
 				if ((m_MyPAIVec[p_Type][i] == p_Value) && (m_MyPAIVec[p_Type][i + 1] == p_Value) && (m_MyPAIVec[p_Type][i + 2] == p_Value))
 				{
@@ -1468,7 +1468,7 @@ bool	CMJ::CheckQY9_HU()
 	{
 		iSize = m_GangPAIVec[i].size();
 		iCount += iSize;
-		for (UINT j = 0; j < iSize; j++)
+		for (INT j = 0; j < iSize; j++)
 		{
 			if (m_GangPAIVec[i][j] != 1 || m_GangPAIVec[i][j] != 9)return false;
 		}
@@ -2492,31 +2492,31 @@ bool	CMJ::CheckQD_HU()
 	if (m_GangPAIVec[1].empty() == false)return false;
 
 	//万，条，饼
-	for (UINT i = 2; i <= 4; i++)
+	for (INT i = 2; i <= 4; i++)
 	{
 		if (m_MyPAIVec[i].empty() == false)
 		{
 			//剩余牌墙
 			int iSize = m_MyPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_MyPAIVec[i][j]<7)return false;
 			}
 			//吃
 			iSize = m_ChiPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_ChiPAIVec[i][j]<7)return false;
 			}
 			//碰
 			iSize = m_PengPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_PengPAIVec[i][j]<7)return false;
 			}
 			//杠
 			iSize = m_GangPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_GangPAIVec[i][j]<7)return false;
 			}
@@ -2539,34 +2539,34 @@ bool	CMJ::CheckQZ_HU()
 	if (m_GangPAIVec[1].empty() == false)return false;
 
 	//万，条，饼
-	for (UINT i = 2; i <= 4; i++)
+	for (INT i = 2; i <= 4; i++)
 	{
 		if (m_MyPAIVec[i].empty() == false)
 		{
 			//剩余牌墙
 			int iSize = m_MyPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_MyPAIVec[i][j]<4)return false;
 				if (m_MyPAIVec[i][j]>6)return false;
 			}
 			//吃
 			iSize = m_ChiPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_ChiPAIVec[i][j]<4)return false;
 				if (m_ChiPAIVec[i][j]>6)return false;
 			}
 			//碰
 			iSize = m_PengPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_PengPAIVec[i][j]<4)return false;
 				if (m_PengPAIVec[i][j]>6)return false;
 			}
 			//杠
 			iSize = m_GangPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_GangPAIVec[i][j]<4)return false;
 				if (m_GangPAIVec[i][j]>6)return false;
@@ -2590,31 +2590,31 @@ bool	CMJ::CheckQX_HU()
 	if (m_GangPAIVec[1].empty() == false)return false;
 
 	//万，条，饼
-	for (UINT i = 2; i <= 4; i++)
+	for (INT i = 2; i <= 4; i++)
 	{
 		if (m_MyPAIVec[i].empty() == false)
 		{
 			//剩余牌墙
 			int iSize = m_MyPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_MyPAIVec[i][j]>3)return false;
 			}
 			//吃
 			iSize = m_ChiPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_ChiPAIVec[i][j]>3)return false;
 			}
 			//碰
 			iSize = m_PengPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_PengPAIVec[i][j]>3)return false;
 			}
 			//杠
 			iSize = m_GangPAIVec[i].size();
-			for (UINT j = 0; j < iSize; j++)
+			for (INT j = 0; j < iSize; j++)
 			{
 				if (m_GangPAIVec[i][j]>3)return false;
 			}
@@ -2628,7 +2628,7 @@ bool	CMJ::CheckQL_HU()
 	//花色
 	int iColorNum = 0;
 	//万，条，饼
-	for (UINT i = 2; i <= 4; i++)
+	for (INT i = 2; i <= 4; i++)
 	{
 		if (m_MyPAIVec[i].empty() == false)
 		{
@@ -2636,7 +2636,7 @@ bool	CMJ::CheckQL_HU()
 
 			if (m_MyPAIVec[i].size() == 9)
 			{
-				for (UINT j = 0; j < 9; j++)
+				for (INT j = 0; j < 9; j++)
 				{
 					if (m_MyPAIVec[i][j] != j)return false;
 				}
@@ -2736,7 +2736,7 @@ bool	CMJ::Check3TK_HU()
 	/*if(m_GangPAIVec[2].size()==4)
 	{
 	//万，条，饼
-	for(UINT i = 3 ; i <= 4 ; i++ )
+	for(INT i = 3 ; i <= 4 ; i++ )
 	{
 	if(m_GangPAIVec[i].size()==4)
 	{
@@ -2759,7 +2759,7 @@ bool	CMJ::Check3AK_HU()
 bool	CMJ::CheckDDJ_HU()
 {
 	int count = 0;
-	for (UINT i = 0; i < 6; i++)
+	for (INT i = 0; i < 6; i++)
 	{
 		count += m_MyPAIVec[i].size();
 	}
@@ -2776,7 +2776,7 @@ bool	CMJ::CheckDDJ_HU()
 bool	CMJ::Check13Y_TING()
 {
 	bool		i13YSize[13];
-	for (UINT i = 0; i < 13; i++)
+	for (INT i = 0; i < 13; i++)
 	{
 		i13YSize[i] = false;
 	}
@@ -2856,7 +2856,7 @@ bool	CMJ::Check13Y_TING()
 		}
 	}
 	int icount = 0;
-	for (UINT i = 0; i < 13; i++)
+	for (INT i = 0; i < 13; i++)
 	{
 		if (i13YSize[i] == true)
 		{
@@ -3343,7 +3343,7 @@ bool	CMJ::CheckHU()
 bool	CMJ::CheckTING()
 {
 	//剑牌
-	for (UINT j = 0; j < 9; j++)
+	for (INT j = 0; j < 9; j++)
 	{
 		//起牌
 		AddPai(0, j + 1);
@@ -3360,7 +3360,7 @@ bool	CMJ::CheckTING()
 		}
 	}
 	//风牌
-	for (UINT j = 0; j < 9; j++)
+	for (INT j = 0; j < 9; j++)
 	{
 		//起牌
 		AddPai(1, j + 1);
@@ -3376,9 +3376,9 @@ bool	CMJ::CheckTING()
 			DelPai(iPaiIndex);
 		}
 	}
-	for (UINT i = 2; i < 5; i++)
+	for (INT i = 2; i < 5; i++)
 	{
-		for (UINT j = 0; j < 9; j++)
+		for (INT j = 0; j < 9; j++)
 		{
 			//起牌
 			AddPai(i, j + 1);
