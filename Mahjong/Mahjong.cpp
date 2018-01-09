@@ -218,7 +218,7 @@ GameStart:
 					{
 						cout << "ÇëÑ¡Ôñ:(³Ô?)";
 					}
-					cout << "(×¢: 1:³Ô 2:Åö 3:¸Ü 4:ºú)";
+					cout << "    (×¢: 1:³Ô 2:Åö 3:¸Ü 4:ºú)";
 					t_Check = true;
 				}
 				//¼ì²éÅöÅÆ
@@ -228,7 +228,7 @@ GameStart:
 					{
 						cout << "ÇëÑ¡Ôñ:(Åö?)";
 					}
-					cout << "(×¢: 1:³Ô 2:Åö 3:¸Ü 4:ºú)";
+					cout << "    (×¢: 1:³Ô 2:Åö 3:¸Ü 4:ºú)";
 					t_Check = true;
 				}
 				//¼ì²é¸ÜÅÆ
@@ -238,7 +238,7 @@ GameStart:
 					{
 						cout << "ÇëÑ¡Ôñ:(¸Ü?)";
 					}
-					cout << "(×¢: 1:³Ô 2:Åö 3:¸Ü 4:ºú)";
+					cout << "    (×¢: 1:³Ô 2:Åö 3:¸Ü 4:ºú)";
 					t_Check = true;
 				}
 				//ÆðÅÆ
@@ -250,7 +250,7 @@ GameStart:
 					{
 						cout << "ÇëÑ¡Ôñ:(ºú?)";
 					}
-					cout << "(×¢: 1:³Ô 2:Åö 3:¸Ü 4:ºú)";
+					cout << "    (×¢: 1:³Ô 2:Åö 3:¸Ü 4:ºú)";
 					t_Check = true;
 				}
 				int iPaiIndex = t_MyPlayer.GetPaiIndex(t_Pai2.m_NewPai.m_Type, t_Pai2.m_NewPai.m_Value);
